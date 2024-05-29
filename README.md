@@ -66,5 +66,6 @@ The ResNeXtBottleneck model acts as a powerful feature extractor by leveraging g
 ## 😉 MIL
 
 The MIL function implements the Multiple Instance Learning loss calculation. This loss function is designed to distinguishes between anomaly and normal instances within each batch and calculates a loss that encourages the model to separate anomaly scores from normal scores. To compute the MIL for anomaly detection, we distinguish between anomaly and normal instances within each batch. The loss function encourages the model to separate anomaly scores from normal scores effectively. The initial loss is calculated using the maximum scores for both anomaly and normal instances, with sparsity and smoothness penalties added. Finally, the average loss across the batch is computed. The final equation for the average loss is:
-
+###
  &nbsp;
+![Screenshot 2024-05-28 102202](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/607f4218-84a7-4d66-aee1-1d6d27266fd9)
