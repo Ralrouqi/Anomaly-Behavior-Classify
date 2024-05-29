@@ -55,6 +55,17 @@ In this section, we will explain the methods of building a video Anomaly detecti
 
 In this project, we used a large-scale dataset called the UCF-Crime dataset, specifically constructed to evaluate anomaly detection methods in surveillance videos. The dataset includes 13 types of real-world anomalies, selected for their significant impact on public safety: Abuse, Arrest, Arson, Assault, Road Accident, Burglary, Explosion, Fighting, Robbery, Shooting, Stealing, Shoplifting, and Vandalism. Videos were sourced from YouTube and LiveLeak using text search queries. The dataset consists of 1900 videos in total. Among these videos, 950 contain clear anomalies videos, while the rest are considered normal.  Figure shown below depicts a sample of anomalies from the UCF dataset.
  As for the challenges we faced while dealing with this dataset, we didn't encounter any issues. However, during the download process, it took a lot of time due to the large size of the videos, which were long and untrimmed.
- ##
+ 
  &nbsp;
  ![image](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/4c419c34-4914-429b-bda6-de439b5a3dc6)
+
+## ⚙️ Feature Extractor
+
+The ResNeXtBottleneck model acts as a powerful feature extractor by leveraging grouped convolutions and deep hierarchical layers to capture complex features from video data. The extracted features can then be used in downstream tasks (anomaly detection).
+
+## 😉 MIL
+
+The MIL function implements the Multiple Instance Learning loss calculation. This loss function is designed to distinguishes between anomaly and normal instances within each batch and calculates a loss that encourages the model to separate anomaly scores from normal scores. To compute the MIL for anomaly detection, we distinguish between anomaly and normal instances within each batch. The loss function encourages the model to separate anomaly scores from normal scores effectively. The initial loss is calculated using the maximum scores for both anomaly and normal instances, with sparsity and smoothness penalties added. Finally, the average loss across the batch is computed. The final equation for the average loss is:
+
+ &nbsp;
+ ![image](C:\Users\ralro\Desktop\Screenshot 2024-05-28 102202.png)
