@@ -1,4 +1,4 @@
-# Anomaly-Behavior-Classify (رَقـيـبّ)
+# 📸 Anomaly-Behavior-Classify (رَقـيـبّ)
 
 # 📖 Table of Contents
 
