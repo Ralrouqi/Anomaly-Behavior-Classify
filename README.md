@@ -1,6 +1,6 @@
 # 📸 Anomaly-Behavior-Classify (رَقـيـبّ)
 
-# 📖 Table of Contents
+# Table of Contents
 
 - [📌 Introduction](#-Introduction)
 - [💡 What is our goal ?](#-What-is-our-goal-)
