@@ -103,8 +103,8 @@ The Learner class is responsible for implementing a neural network classifier wi
 # 🧩 How can you run the Demo ? 
 
 To run (رَقــيــبّ) system you must follow these steps: 
-## 1 . Download the Demo.py and ModelCapstoneClassify.py file from our repo
-## 2 . Open the terminal at your VS code
-## 3 . Run ' Streamlit run Demo.py ' , Note: You should install the Streamlit library !
+### 1 . Download the Demo.py and ModelCapstoneClassify.py file from our repo
+### 2 . Open the terminal at your VS code
+### 3 . Run ' Streamlit run Demo.py ' , Note: You should install the Streamlit library !
 
-Try it and tell us about your feedback 🤝!
+# Try it and tell us about your feedback 🤝!
