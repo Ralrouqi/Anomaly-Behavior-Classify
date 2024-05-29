@@ -69,3 +69,16 @@ The MIL function implements the Multiple Instance Learning loss calculation. Thi
 ###
  &nbsp;
 ![Screenshot 2024-05-28 102202](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/607f4218-84a7-4d66-aee1-1d6d27266fd9)
+
+## ⭐ Learner Model
+
+The Learner class is responsible for implementing a neural network classifier with a sequential architecture comprising linear layers, ReLU activations, dropout regularization, and a final sigmoid activation. During initialization, it sets up the classifier architecture and initializes the weights using Xavier normal initialization, ensuring a balanced initialization for effective training. The class collects the parameters of the classifier within self.vars for easy management and access during training. In the forward pass, the Learner class defines the sequence of operations using the collected parameters, sequentially applying linear transformations, ReLU activations, and dropout regularization. Finally, it returns the output after passing through the sigmoid activation function, providing a streamlined approach to neural network classification tasks.
+
+## 📈 Evaluation
+
+
+ We can see that our approach showed an accuracy of 84% for the UCF-Crime dataset, as indicated by the receiver operating characteristic (ROC) curve in Figure 1 shown below. This represents a significant improvement over previous studies in the field of anomaly detection. The 84% accuracy highlights the effectiveness of our model in classifying events. Additionally, our model achieved an F1 score of 85%, further confirming its reliability and precision in detecting unusual activities, as shown below in Figure 2.
+ The significant improvement in accuracy and F1 score shows that our model is robust and can be used in real-world surveillance systems. These results indicate that the system can effectively enhance public safety and security by accurately and promptly detecting anomalous activities, thus supporting the goals of Saudi Vision 2030 to create safer communities.
+
+ ###
+ 
