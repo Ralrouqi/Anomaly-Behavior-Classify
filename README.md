@@ -43,9 +43,13 @@ We using a ResNeXtBottleneck pre-trained model combined with a custom classifier
 
 The custom Learner model, a simple feedforward neural network, takes the features extracted by ResNeXtBottleneck and performs the final classification. Its simplicity makes it easy to customize and tune for specific tasks. Including a dropout layer helps regularize the model, reducing the risk of overfitting, especially with limited data. By training only the Learner model and keeping the feature extractor frozen (or fine-tuning only the last few layers), we can achieve good performance with reduced computational resources and training time. This combination leverages the strengths of both models, providing an efficient solution for video anomaly detection.
 
+###
+
+
 ## 🏅 Accurate Model
 
 Compared to 6 studies in the field of detecting anomaly behaviors in surveillance cameras, the performance of our model was the most accurate, as it topped the six studies with a rate of 84%!
+###
 
 # 🛠️ Implementation
 
@@ -80,5 +84,17 @@ The Learner class is responsible for implementing a neural network classifier wi
  We can see that our approach showed an accuracy of 84% for the UCF-Crime dataset, as indicated by the receiver operating characteristic (ROC) curve in Figure 1 shown below. This represents a significant improvement over previous studies in the field of anomaly detection. The 84% accuracy highlights the effectiveness of our model in classifying events. Additionally, our model achieved an F1 score of 85%, further confirming its reliability and precision in detecting unusual activities, as shown below in Figure 2.
  The significant improvement in accuracy and F1 score shows that our model is robust and can be used in real-world surveillance systems. These results indicate that the system can effectively enhance public safety and security by accurately and promptly detecting anomalous activities, thus supporting the goals of Saudi Vision 2030 to create safer communities.
 
- ###
- 
+ ### 📉 Figure 1 ((ROC) curve)
+ ![roc_curve](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/bff24ff7-d9f8-4ece-9546-16b6af92a930)
+ ### 〽️ Figure 2 (F1 Score)
+![f1_scores](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/f2a5130b-e50b-417a-9675-2ab76b390db1)
+
+
+# 🧩 How can you run the Demo ? 
+
+To run (رَقــيــبّ) system you must follow these steps: 
+## 1 . Download the Demo.py and ModelCapstoneClassify.py file from our repo
+## 2 . Open the terminal at your VS code
+## 3 . Run ' Streamlit run Demo.py ' , Note: You should install the Streamlit library !
+
+Try it and tell us about your feedback 🤝!
