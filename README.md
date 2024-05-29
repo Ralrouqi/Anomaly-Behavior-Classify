@@ -55,4 +55,5 @@ In this section, we will explain the methods of building a video Anomaly detecti
 
 In this project, we used a large-scale dataset called the UCF-Crime dataset, specifically constructed to evaluate anomaly detection methods in surveillance videos. The dataset includes 13 types of real-world anomalies, selected for their significant impact on public safety: Abuse, Arrest, Arson, Assault, Road Accident, Burglary, Explosion, Fighting, Robbery, Shooting, Stealing, Shoplifting, and Vandalism. Videos were sourced from YouTube and LiveLeak using text search queries. The dataset consists of 1900 videos in total. Among these videos, 950 contain clear anomalies videos, while the rest are considered normal.  Figure shown below depicts a sample of anomalies from the UCF dataset.
  As for the challenges we faced while dealing with this dataset, we didn't encounter any issues. However, during the download process, it took a lot of time due to the large size of the videos, which were long and untrimmed.
+ 
  ![image](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/4c419c34-4914-429b-bda6-de439b5a3dc6)
