@@ -44,12 +44,22 @@ We using a ResNeXtBottleneck pre-trained model combined with a custom classifier
 The custom Learner model, a simple feedforward neural network, takes the features extracted by ResNeXtBottleneck and performs the final classification. Its simplicity makes it easy to customize and tune for specific tasks. Including a dropout layer helps regularize the model, reducing the risk of overfitting, especially with limited data. By training only the Learner model and keeping the feature extractor frozen (or fine-tuning only the last few layers), we can achieve good performance with reduced computational resources and training time. This combination leverages the strengths of both models, providing an efficient solution for video anomaly detection.
 
 ###
-
+![photo_2024-05-29_12-01-15](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/752d5a2d-43a0-4e53-b790-d70dee87d8f3)
 
 ## 🏅 Accurate Model
 
 Compared to 6 studies in the field of detecting anomaly behaviors in surveillance cameras, the performance of our model was the most accurate, as it topped the six studies with a rate of 84%!
 ###
+![photo_2024-05-29_12-02-17](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/1d4d2000-00d7-408d-b56c-06a1bd9a7261)
+ which is the numberes shown in figure above indecite:
+ 1. Claws: Clustering assisted weakly supervised learning with normalcy suppression for anomalous event detection , with accuracy (83.03%)
+ 2. Weakly-supervised joint anomaly detection and classification , with accuracy (82.12%)
+ 3. Anomalous event recognition in videos based on joint learning of motion and appearance with multiple ranking measures , with accuracy (81.91%)
+ 4. Anomaly event detection in security surveillance using two-stream based model , with accuracy (81.22%)
+ 5. Graph convolutional label noise cleaner: Train a plug-and-play action classifier for anomaly detection , with accuracy (82.14%)
+ 6. Cleaning label noise with clusters for minimally supervised anomaly detection , with accuracy (78.27%)
+ 7. Our System (رَقـيـبّ) , with accuracy (84%) 🥇!!
+ 
 
 # 🛠️ Implementation
 
