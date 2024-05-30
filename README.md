@@ -103,8 +103,10 @@ The Learner class is responsible for implementing a neural network classifier wi
 
 ## ⚠️ Challenges
 
-### Dataset Challenge:  As for the challenges we faced while dealing with this dataset, we didn’t encounter any issues. However, during the download process, it took a lot of time due to the large size of the videos, which were long and untrimmed.
-### First Experminet Issue: The batch size of the architecture caused problems for the model during testing. The model failed to recognize different video batches (segments), which varied according to each video and its range. A solution was tested by making the segments of the video static, which enabled the model to work but resulted in overfitting, with both detection part accuracy and classification part accuracy reaching 100% from the first epochs. We attempted to optimize the model by using dropout layers, changing the segment sizes to different ranges, and increasing the training data. However, due to lack of time, we decided to stop fixing the code and shifted the focus to only anomaly detection.
+### Dataset Challenge: 
+As for the challenges we faced while dealing with this dataset, we didn’t encounter any issues. However, during the download process, it took a lot of time due to the large size of the videos, which were long and untrimmed.
+### First Experminet Issue:
+The batch size of the architecture caused problems for the model during testing. The model failed to recognize different video batches (segments), which varied according to each video and its range. A solution was tested by making the segments of the video static, which enabled the model to work but resulted in overfitting, with both detection part accuracy and classification part accuracy reaching 100% from the first epochs. We attempted to optimize the model by using dropout layers, changing the segment sizes to different ranges, and increasing the training data. However, due to lack of time, we decided to stop fixing the code and shifted the focus to only anomaly detection.
 
 # 🧩 How can you run the Demo ? 
 
