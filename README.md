@@ -13,6 +13,7 @@
   - [😉 MIL ](#-MIL)
   - [⭐ Learner Model](#Learner-Model-)
   - [📈 Evaluation](#Evaluation-)
+  - [⚠️ Challenges](#Challenges-)
  - [🧩 How can you run the Demo ? ](#-How-can-you-run-the-Demo-)
 
 
@@ -33,15 +34,15 @@ Design the system to detect a wide range of anomalous events without needing spe
 
 The scope of our project will focus on:
 Using training videos that are weakly labeled, where only the overall video is labeled as either normal or containing an anomaly, but the specific location of the anomaly within the video is not known.
-Implementing a ###multiple instance learning (MIL)### framework to process these weakly labeled videos.
+Implementing a **multiple instance learning (MIL)** framework to process these weakly labeled videos.
 Designing a deep learning model that can learn to identify and rank anomalous segments within a video.
 Ensuring the system can handle diverse and changing environments captured by surveillance cameras, reducing false alarm rates.
 
 # 🤖 Our Model
 
-We using a ###ResNeXt Bottleneck### pre-trained model combined with a ###custom classifier (Learner model)### to detects anomaly in videos. ResNeXtBottleneck is pre-trained on UCF-Crime datasets , which allows it to learn rich feature representations. This pre-training helps the model extract meaningful features from new datasets with fewer training samples. Additionally, ###ResNeXt Bottleneck's### deep and wide architecture, which includes multiple paths for feature extraction, enables it to capture a variety of features at different levels of abstraction. This flexibility means the output features from ###ResNeXt Bottleneck### can be easily adapted to various downstream tasks without re-training the entire network. ###ResNeXt Bottleneck### has also demonstrated strong performance on various benchmarks, making it a reliable choice for feature extraction.
+We using a **ResNeXt Bottleneck** pre-trained model combined with a **custom classifier (Learner model)** to detects anomaly in videos. ResNeXtBottleneck is pre-trained on UCF-Crime datasets , which allows it to learn rich feature representations. This pre-training helps the model extract meaningful features from new datasets with fewer training samples. Additionally, **ResNeXt Bottleneck's** deep and wide architecture, which includes multiple paths for feature extraction, enables it to capture a variety of features at different levels of abstraction. This flexibility means the output features from **ResNeXt Bottleneck** can be easily adapted to various downstream tasks without re-training the entire network. **ResNeXt Bottleneck** has also demonstrated strong performance on various benchmarks, making it a reliable choice for feature extraction.
 
-###The custom Learner model###, a simple feedforward neural network, takes the features extracted by ###ResNeXt Bottleneck### and performs the final classification. Its simplicity makes it easy to customize and tune for specific tasks. Including a dropout layer helps regularize the model, reducing the risk of overfitting, especially with limited data. By training only the Learner model and keeping the feature extractor frozen (or fine-tuning only the last few layers), we can achieve good performance with reduced computational resources and training time. This combination leverages the strengths of both models, providing an efficient solution for video anomaly detection.
+**The custom Learner model** a simple feedforward neural network, takes the features extracted by **ResNeXt Bottleneck** and performs the final classification. Its simplicity makes it easy to customize and tune for specific tasks. Including a dropout layer helps regularize the model, reducing the risk of overfitting, especially with limited data. By training only the Learner model and keeping the feature extractor frozen (or fine-tuning only the last few layers), we can achieve good performance with reduced computational resources and training time. This combination leverages the strengths of both models, providing an efficient solution for video anomaly detection.
 
 ###
 ![photo_2024-05-29_12-01-15](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/752d5a2d-43a0-4e53-b790-d70dee87d8f3)
@@ -67,7 +68,7 @@ In this section, we will explain the methods of building a video Anomaly detecti
 
 ## ✅ Data Description
 
-In this project, we used a large-scale dataset called the ###UCF-Crime dataset###, specifically constructed to evaluate anomaly detection methods in surveillance videos. The dataset includes 13 types of real-world anomalies, selected for their significant impact on public safety: Abuse, Arrest, Arson, Assault, Road Accident, Burglary, Explosion, Fighting, Robbery, Shooting, Stealing, Shoplifting, and Vandalism. Videos were sourced from YouTube and LiveLeak using text search queries. The dataset consists of 1900 videos in total. Among these videos, 950 contain clear anomalies videos, while the rest are considered normal.  Figure shown below depicts a sample of anomalies from the UCF dataset.
+In this project, we used a large-scale dataset called the **UCF-Crime dataset** specifically constructed to evaluate anomaly detection methods in surveillance videos. The dataset includes 13 types of real-world anomalies, selected for their significant impact on public safety: Abuse, Arrest, Arson, Assault, Road Accident, Burglary, Explosion, Fighting, Robbery, Shooting, Stealing, Shoplifting, and Vandalism. Videos were sourced from YouTube and LiveLeak using text search queries. The dataset consists of 1900 videos in total. Among these videos, 950 contain clear anomalies videos, while the rest are considered normal.  Figure shown below depicts a sample of anomalies from the UCF dataset.
  As for the challenges we faced while dealing with this dataset, we didn't encounter any issues. However, during the download process, it took a lot of time due to the large size of the videos, which were long and untrimmed.
  ###
  &nbsp;
@@ -100,6 +101,10 @@ The Learner class is responsible for implementing a neural network classifier wi
 ![f1_scores](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/f2a5130b-e50b-417a-9675-2ab76b390db1)
 ### 〽️ Figure 2 (F1 Score)
 
+## ⚠️ Challenges
+
+### Dataset Challenge:  As for the challenges we faced while dealing with this dataset, we didn’t encounter any issues. However, during the download process, it took a lot of time due to the large size of the videos, which were long and untrimmed.
+### First Experminet Issue: The batch size of the architecture caused problems for the model during testing. The model failed to recognize different video batches (segments), which varied according to each video and its range. A solution was tested by making the segments of the video static, which enabled the model to work but resulted in overfitting, with both detection part accuracy and classification part accuracy reaching 100% from the first epochs. We attempted to optimize the model by using dropout layers, changing the segment sizes to different ranges, and increasing the training data. However, due to lack of time, we decided to stop fixing the code and shifted the focus to only anomaly detection.
 
 # 🧩 How can you run the Demo ? 
 
