@@ -50,7 +50,7 @@ The custom Learner model, a simple feedforward neural network, takes the feature
 
 Compared to 6 studies in the field of detecting anomaly behaviors in surveillance cameras, the performance of our model was the most accurate, as it topped the six studies with a rate of 84%!
 ###
-![photo_2024-05-29_12-02-17](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/1d4d2000-00d7-408d-b56c-06a1bd9a7261)
+![Colorful Modern Line Chart Diagram Graph](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/283f12a7-ebed-4eac-9db3-a76c622013d0)
  ### The numberes shown in figure above indecite:
  1. Claws: Clustering assisted weakly supervised learning with normalcy suppression for anomalous event detection , with accuracy (83.03%)
  2. Weakly-supervised joint anomaly detection and classification , with accuracy (82.12%)
@@ -93,18 +93,19 @@ The Learner class is responsible for implementing a neural network classifier wi
 
  We can see that our approach showed an accuracy of 84% for the UCF-Crime dataset, as indicated by the receiver operating characteristic (ROC) curve in Figure 1 shown below. This represents a significant improvement over previous studies in the field of anomaly detection. The 84% accuracy highlights the effectiveness of our model in classifying events. Additionally, our model achieved an F1 score of 85%, further confirming its reliability and precision in detecting unusual activities, as shown below in Figure 2.
  The significant improvement in accuracy and F1 score shows that our model is robust and can be used in real-world surveillance systems. These results indicate that the system can effectively enhance public safety and security by accurately and promptly detecting anomalous activities, thus supporting the goals of Saudi Vision 2030 to create safer communities.
-
- ### 📉 Figure 1 ((ROC) curve)
+###
  ![roc_curve](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/bff24ff7-d9f8-4ece-9546-16b6af92a930)
- ### 〽️ Figure 2 (F1 Score)
+### 📉 Figure 1 ((ROC) curve)
 ![f1_scores](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/f2a5130b-e50b-417a-9675-2ab76b390db1)
+### 〽️ Figure 2 (F1 Score)
 
 
 # 🧩 How can you run the Demo ? 
 
 To run (رَقــيــبّ) system you must follow these steps: 
-### 1 . Download the Demo.py and ModelCapstoneClassify.py file from our repo
-### 2 . Open the terminal at your VS code
-### 3 . Run ' Streamlit run Demo.py ' , Note: You should install the Streamlit library !
+### 1 . Clone our repo
+### 2 . Download the requirments.py to import the neccesary libraries
+### 3 . Open the terminal at your VS code
+### 4 . Run ' Streamlit run Demo.py ' , Note: You should install the Streamlit library !
 
 # Try it and tell us about your feedback 🤝!
