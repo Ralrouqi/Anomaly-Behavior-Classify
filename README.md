@@ -114,8 +114,8 @@ The batch size of the architecture caused problems for the model during testing.
 
 To run (رَقــيــبّ) system you must follow these steps: 
 ### 1 . Clone our repo
-### 2 . Download the requirments.py to import the neccesary libraries
+### 2 . Download the requirments.txt to import the neccesary libraries
 ### 3 . Open the terminal at your VS code
-### 4 . Run ' Streamlit run Demo.py ' , Note: You should install the Streamlit library !
+### 4 . Run ' Streamlit run streamlit.py ' 
 
 # Try it and tell us about your feedback 🤝!
