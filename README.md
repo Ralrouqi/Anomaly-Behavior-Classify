@@ -74,7 +74,9 @@ In this project, we used a large-scale dataset called the **UCF-Crime dataset** 
  &nbsp;
  ![image](https://github.com/Ralrouqi/Anomaly-Behavior-Classify/assets/93721390/4c419c34-4914-429b-bda6-de439b5a3dc6)
 
-You can explore our data from here: ![link]([https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?e=1&dl=0](https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?e=1&dl=0))
+You can explore our data from here: [link](https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?e=1&dl=0)
+
+
 ## ⚙️ Feature Extractor
 
 The ResNeXtBottleneck model acts as a powerful feature extractor by leveraging grouped convolutions and deep hierarchical layers to capture complex features from video data. The extracted features can then be used in downstream tasks (anomaly detection).
